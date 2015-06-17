@@ -43,11 +43,13 @@
 mark.red{
 	color: red;
 	background: none;
+	font: arialmt;
 }
 
 mark.green{
 	color: green;
 	background: none;
+	font: arialmt;
 }
 
 table {
