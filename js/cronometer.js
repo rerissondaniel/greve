@@ -1,4 +1,9 @@
-var myVar = setInterval(function(){ putDate(calcDateDiferences(new Date(2015, 5, 22, 0, 0, 0, 0), new Date())) }, 1000);
+var myVar = setInterval(function()
+	{ 
+		var dt = new Date();
+		dt.setMonth(6);
+		putDate(calcDateDiferences(new Date(2015, 5, 22, 0, 0, 0, 0), dt)) 
+	}, 1000);
 
 function daysInMonth(month,year) {
     return new Date(year, month, 0).getDate();
@@ -6,8 +11,15 @@ function daysInMonth(month,year) {
 
 function calcDateDiferences(startDate, endDate){
 	var ret = [0, 0, 0, 0];
-	
-	
+	if(startDate.getMonth() < endDate.getMonth()){
+		ret[0] = daysInMonth(startDate.getMonth(), startDate.getYear()) - startDate.getDate();
+		for (var i = startDate.getMonth() + 1; i < endDate.getMonth(); i++) {
+			ret[0] += daysInMonth(startDate.getYear(), i);
+		};
+		ret[0] += endDate.getDate();
+	}else{
+		ret[0] = endDate.getDate() - startDate.getDate();
+	}
 
 	ret[1] = endDate.getHours();
 	ret[2] = endDate.getMinutes();
