@@ -1,12 +1,24 @@
-/*var myVar = setInterval(function(){ myTimer() }, 1000);
+var myVar = setInterval(function(){ putDate(calcDateDiferences(new Date(2015, 5, 22, 0, 0, 0, 0), new Date())) }, 1000);
 
-function myTimer() {
-    var d = new Date();
-    var date = new Date(d.getYear(), d.getMonth(), 21 - d.getDate(), 23 - d.getHours(), 60 - d.getMinutes(), 60 - d.getSeconds(), 00);
-
-    document.getElementById("day").textContent = date.getDate() == 31 || date.getDate() == 0 ? '00' : '0' + date.getDate();
-    document.getElementById("hour").textContent = date.getHours() >= 10 ? date.getHours() : '0' + date.getHours();
-    document.getElementById("minute").textContent = date.getMinutes() >= 10 ? date.getMinutes() : '0' + date.getMinutes();
-    document.getElementById("second").textContent = date.getSeconds() >= 10 ? date.getSeconds() : '0' + date.getSeconds();
+function daysInMonth(month,year) {
+    return new Date(year, month, 0).getDate();
 }
-*/
+
+function calcDateDiferences(startDate, endDate){
+	var ret = [0, 0, 0, 0];
+	
+	
+
+	ret[1] = endDate.getHours();
+	ret[2] = endDate.getMinutes();
+	ret[3] = endDate.getSeconds();
+
+	return ret;
+}
+
+function putDate(date) {
+    document.getElementById("day").textContent = date[0] >= 10 ? date[0] : '0' + date[0];
+    document.getElementById("hour").textContent = date[1] >= 10 ? date[1] : '0' + date[1];
+    document.getElementById("minute").textContent = date[2] >= 10 ? date[2] : '0' + date[2];
+    document.getElementById("second").textContent = date[3] >= 10 ? date[3] : '0' + date[3];
+}
