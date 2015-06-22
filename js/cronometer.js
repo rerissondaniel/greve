@@ -1,4 +1,4 @@
-var myVar = setInterval(function(){ myTimer() }, 1000);
+/*var myVar = setInterval(function(){ myTimer() }, 1000);
 
 function myTimer() {
     var d = new Date();
@@ -9,3 +9,4 @@ function myTimer() {
     document.getElementById("minute").textContent = date.getMinutes() >= 10 ? date.getMinutes() : '0' + date.getMinutes();
     document.getElementById("second").textContent = date.getSeconds() >= 10 ? date.getSeconds() : '0' + date.getSeconds();
 }
+*/
