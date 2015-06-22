@@ -1,7 +1,6 @@
 var myVar = setInterval(function()
 	{ 
 		var dt = new Date();
-		dt.setMonth(6);
 		putDate(calcDateDiferences(new Date(2015, 5, 22, 0, 0, 0, 0), dt)) 
 	}, 1000);
 
