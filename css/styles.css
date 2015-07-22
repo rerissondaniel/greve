@@ -27,7 +27,7 @@
 }
 
 #header{
-	font-size: 100;
+	font-size: 500%;
 	
 	font-family: edwardian-script;
 	font-weight: bold;
@@ -86,7 +86,7 @@ a{
 }
 
 td {
-	font-size: 100;
+	font-size: 500%;
 	color: white;
 	background-color: black;
 	-moz-border-radius: 5%;
@@ -94,6 +94,6 @@ td {
 }
 
 td.legenda {
-	font-size: 50;
+	font-size: 150%;
 	padding: 1%;
 }
