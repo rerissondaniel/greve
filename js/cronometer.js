@@ -1,7 +1,7 @@
 var myVar = setInterval(function()
 	{ 
 		var dt = new Date();
-		putDate(calcDateDiferences(new Date(2015, 5, 22, 0, 0, 0, 0), dt)) 
+		putDate();
 	}, 1000);
 
 function daysInMonth(month,year) {
@@ -27,7 +27,7 @@ function calcDateDiferences(startDate, endDate){
 	return ret;
 }
 
-function putDate(date) {
+function putDate() {
     document.getElementById("day").textContent = '103';
     document.getElementById("hour").textContent = '00';
     document.getElementById("minute").textContent = '00';
