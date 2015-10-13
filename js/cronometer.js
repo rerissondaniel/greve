@@ -28,8 +28,8 @@ function calcDateDiferences(startDate, endDate){
 }
 
 function putDate(date) {
-    document.getElementById("day").textContent = date[0] >= 10 ? date[0] : '0' + date[0];
-    document.getElementById("hour").textContent = date[1] >= 10 ? date[1] : '0' + date[1];
-    document.getElementById("minute").textContent = date[2] >= 10 ? date[2] : '0' + date[2];
-    document.getElementById("second").textContent = date[3] >= 10 ? date[3] : '0' + date[3];
+    document.getElementById("day").textContent = '103';
+    document.getElementById("hour").textContent = '00';
+    document.getElementById("minute").textContent = '00';
+    document.getElementById("second").textContent = '00';
 }
